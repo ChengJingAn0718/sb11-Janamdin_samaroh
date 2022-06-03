@@ -46,6 +46,7 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
             setSceneLoad(true)
         },
         sceneStart: () => {
+            setRepeatType(1)
             parentRef.current.className = 'aniObject'
             startSecondPart()
             loadFunc()
