@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useContext, useState } from 'react';
 import "../stylesheets/styles.css";
 import BaseImage from '../components/BaseImage';
 import { UserContext } from '../components/BaseShot';
-import { prePathUrl, getAudioPath, setRepeatType, setRepeatAudio, startRepeatAudio, stopRepeatAudio } from "../components/CommonFunctions";
+import { prePathUrl, getAudioPath, setRepeatType, setRepeatAudio, startRepeatAudio, stopRepeatAudio, setExtraVolume } from "../components/CommonFunctions";
 import { textInfoList, iconList, gapList } from "../components/CommonVarariant"
 
 
@@ -18,13 +18,11 @@ let activeInterval
 let timerList = []
 
 let clickedList = []
-let wordGround = [6, 5]
+let wordGround = [5, 5]
 
 const posInfoList = [
-
-    { x: 1, y: 40 },
-    { x: 34, y: 40 },
-    { x: 68, y: 40, m: true },
+    { x: 15, y: 40 },
+    { x: 55, y: 40 },
     { x: 1, y: 70 },
     { x: 34, y: 70 },
     { x: 68, y: 70, m: true },
@@ -94,6 +92,12 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo }, ref) => {
             clickedList = []
 
             setRepeatAudio(audioList.commonAudio3)
+
+            setExtraVolume(audioList.commonAudio3, 2)
+
+            for (let i = 0; i < 10; i++)
+                setExtraVolume(audioList[i], 2)
+
         },
         sceneEnd: () => {
         }
@@ -104,18 +108,11 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo }, ref) => {
             isRendered = true;
             timerList[6] = setTimeout(() => {
                 audioList.bodyAudio1.play();
-
-                // timerList[7] = setTimeout(() => {
-                //     audioList.bodyAudio2.play();
-
                 timerList[8] = setTimeout(() => {
                     audioList.commonAudio3.play()
                     startRepeatAudio()
-                    // }, audioList.bodyAudio2.duration * 1000 + 300);
                 }, audioList.bodyAudio1.duration * 1000 + 500);
             }, 1000);
-
-            // baseObject.current.className = 'aniObject'
         }
     }
 

@@ -38,10 +38,15 @@ let commonAudio1 = new loadSound('common/common1');
 let commonAudio2 = new loadSound('common/common2');
 let commonAudio3 = new loadSound('common/common3');
 
+
+let excellentAudio = new loadSound('excellent', true)
+let middleAudio = new loadSound('common/middle')
+let reviewAudio = new loadSound('common/review0')
+
 let subAudioList = []
 
 
-Array.from(Array(11).keys()).map(value => {
+Array.from(Array(10).keys()).map(value => {
     subAudioList.push(new loadSound('word/' + (value + 1)))
 })
 
@@ -78,6 +83,10 @@ let audioList = {
     commonAudio2,
     commonAudio3,
 
+    excellentAudio,
+    reviewAudio,
+    middleAudio,
+    
     successAudio,
     ...subAudioList
 }
