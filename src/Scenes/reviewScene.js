@@ -38,6 +38,7 @@ const posInfoList = [
 let doneCount = 0
 let stepCount = 0;
 let lastIndex = 0
+
 const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo }, ref) => {
 
     const audioList = useContext(UserContext)

@@ -6,8 +6,6 @@ import loadSound from "../utils/loadSound"
 import { prePathUrl } from "./CommonFunctions";
 import { LoadingCircleBar } from "./CommonButtons"
 
-var oldBackgroundImage = 'SB_37_Stage_BG_2';
-var _isBackSoundPlaying = true;
 
 const animationColorList = [
     ['#51c9b5', '#cc55d9', '#f55185'],
