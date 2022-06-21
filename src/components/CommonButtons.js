@@ -82,7 +82,7 @@ const MusicButton = React.forwardRef((prop, ref) => {
             setTimeout(() => {
                 currentRef.current.className = 'introText'
 
-                setExtraVolume(prop.backAudio, 2)
+                setExtraVolume(prop.backAudio, 1.5)
 
                 prop.backAudio.currentTime = 0;
                 prop.backAudio.play().catch(error => { });
