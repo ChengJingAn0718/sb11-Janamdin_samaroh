@@ -411,7 +411,7 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc, bgLoaded }, ref)
                         )
                     }
                     {
-                        isSubMaskLoaded && ['16', '17', '18'].map((value, index) =>
+                        isSubMaskLoaded && ['16', '18', '17'].map((value, index) =>
                             <MaskComponent
                                 ref={subMaskRefList[index + 2]}
                                 maskPath={returnImgPath(value, true)}
