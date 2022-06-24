@@ -30,11 +30,11 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc }, ref) => {
 
 
 
-            setExtraVolume(audioList.tingAudio, 2)
-            setExtraVolume(audioList.successAudio, 2)
-            setExtraVolume(audioList.buzzAudio, 2)
-            setExtraVolume(audioList.clapAudio, 2)
-            setExtraVolume(audioList.yeahAudio, 2)
+            setExtraVolume(audioList.tingAudio, 3)
+            setExtraVolume(audioList.successAudio, 3)
+            setExtraVolume(audioList.buzzAudio, 3)
+            setExtraVolume(audioList.clapAudio, 3)
+            setExtraVolume(audioList.yeahAudio, 3)
 
 
             loadFunc();
