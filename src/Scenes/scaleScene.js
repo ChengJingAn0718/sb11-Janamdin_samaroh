@@ -168,7 +168,7 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc, bgLoaded }, ref)
     ]
     function showIndividualImage() {
         blackWhiteObject.current.className = 'hideObject'
-        let currentMaskName = maskPathList[currentMaskNum]
+        let currentMaskName = maskPathList[currentMaskNum][0]
 
         baseObject.current.style.transition = durationList[currentMaskNum] + 's'
 
@@ -287,7 +287,7 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc, bgLoaded }, ref)
 
                                     currentMaskNum++;
 
-                                    currentMaskName = maskPathList[currentMaskNum]
+                                    currentMaskName = maskPathList[currentMaskNum][0]
                                     if (currentMaskName != 'sub')
                                         blackWhiteObject.current.style.WebkitMaskImage = 'url("' +
                                             returnImgPath(maskPathList[currentMaskNum], true) + '")'
@@ -433,22 +433,6 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc, bgLoaded }, ref)
                             url={'bg/base.png'}
                         />
                     </div>
-
-                    {
-                        wordTextList.map((value, index) =>
-                            <BaseImage
-                                className='hideObject'
-                                ref={value}
-                                scale={0.18}
-                                posInfo={{
-                                    l: 0.77,
-                                    t: 0.35,
-                                }}
-                                url={'intro/t' + (index + 1) + '.png'}
-                            />
-                        )
-
-                    }
                 </div>
             }
         </div >
