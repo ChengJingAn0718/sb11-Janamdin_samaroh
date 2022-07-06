@@ -70,8 +70,8 @@ export default function Scene18({ nextFunc, _geo, _baseGeo }) {
 
             audioList.clapAudio.currentTime = 0;
             audioList.yeahAudio.currentTime = 0;
+            
             audioList.replayAudio.currentTime = 0;
-
             audioList.replayAudio.pause();
 
             audioList.backAudio.volume = 0.04;
@@ -130,7 +130,7 @@ export default function Scene18({ nextFunc, _geo, _baseGeo }) {
 
                         width={"100%"}
                         draggable={false}
-                        src={prePathUrl() + 'images/buttons/Replay_Blue.svg'}
+                        src={prePathUrl() + 'images/buttons/replay_blue.svg'}
                     />
                 </div>
             </div>

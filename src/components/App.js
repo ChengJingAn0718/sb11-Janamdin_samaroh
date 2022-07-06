@@ -68,7 +68,7 @@ const App = React.forwardRef(({ geo, _startTransition, baseGeo, bgLoaded }, ref)
 
       currentSceneNum++
       sceneList[currentSceneNum].current.sceneStart()
-    }, 300);
+    }, 10);
   }
 
   function loadFunc() {
